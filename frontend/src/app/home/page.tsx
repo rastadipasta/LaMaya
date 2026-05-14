@@ -4,6 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
+const imgBoxSlika = "/images/box-slika.png";
 const imgLuksuzniBuketUKutiji = "/images/luksuzni-buket.png";
 const imgMirisnaSvijecaILifestyle = "/images/mirisna-svijeca-lifestyle.png";
 const imgClassicBoxBuket = "/images/classic-box-buket.png";
@@ -51,43 +52,41 @@ export default function LaMayaHome() {
           
           {/* Hero Section */}
           <section className="w-full max-w-[1200px] px-4 md:px-6 pt-4 md:pt-[48px]">
-            <div className="relative aspect-[4/5] md:aspect-[21/9] min-h-[500px] md:min-h-[600px] w-full rounded-[20px] overflow-hidden group shadow-2xl">
-              {/* Background Image & Ellipse */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  alt="Luksuzni buket u kutiji" 
-                  className="absolute inset-0 size-full object-cover group-hover:scale-105 transition-transform duration-[20s] ease-linear" 
-                  src={imgLuksuzniBuketUKutiji} 
-                />
-                <div className="absolute h-[100px] md:h-[200px] left-[10%] md:left-[69px] top-[20%] md:top-[133px] w-[80%] md:w-[704px] opacity-30 animate-pulse-slow">
-                  <img alt="" className="block w-full h-full object-contain" src={imgEllipse1} />
+            <div className="relative w-full rounded-[20px] overflow-hidden shadow-2xl bg-[#fff8f5]">
+              <div className="flex flex-col md:flex-row items-stretch min-h-[500px] md:min-h-[600px]">
+                
+                {/* Left Side - New Box Image */}
+                <div className="relative w-full md:w-[50%] overflow-hidden group">
+                  <img 
+                    alt="La Maya Box Buket" 
+                    className="absolute inset-0 size-full object-cover object-center group-hover:scale-105 transition-transform duration-[10s] ease-out" 
+                    src={imgBoxSlika} 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#fff8f5]/20" />
                 </div>
-              </div>
-              
-              {/* Overlay for depth and readability - darkened more on mobile for text contrast */}
-              <div className="absolute inset-0 z-10 backdrop-blur-[1px] bg-gradient-to-t md:bg-gradient-to-r from-[#fff8f5]/90 via-[#fff8f5]/70 to-[#fff8f5]/30 md:to-transparent md:w-[60%]" />
-              
-              {/* Content */}
-              <div className="relative z-20 h-full flex flex-col justify-center items-center md:items-start px-6 md:px-[80px] text-center md:text-left max-w-[800px] animate-fade-in-left">
-                <div className="space-y-6 flex flex-col items-center md:items-start">
-                  <div className="space-y-2 flex flex-col items-center md:items-start">
-                    <h1 className="font-serif text-[#1f1b18] text-4xl md:text-5xl lg:text-6xl leading-[1.1] drop-shadow-sm">
-                      Box buketi & <br className="hidden md:block" /> mirisne svijeće
-                    </h1>
-                    <div className="h-1 w-20 bg-[#81524b] rounded-full" />
-                  </div>
-                  
-                  <p className="font-sans text-[#514441] text-base md:text-xl leading-relaxed max-w-[500px] opacity-90">
-                    Personalizirani pokloni kreirani s pažnjom. Otkrijte našu ponudu box buketa i svijeća. Dostava cijela HR | Zagreb besplatno.
-                  </p>
-                  
-                  <div className="pt-4">
-                    <Link 
-                      href="/galerija" 
-                      className="inline-flex items-center justify-center bg-[#81524b] text-white px-8 md:px-10 py-4 md:py-5 rounded-[20px] font-sans font-medium text-[13px] md:text-[14px] tracking-[2px] uppercase transition-all duration-300 hover:bg-[#6e463f] hover:shadow-[0_10px_20px_rgba(129,82,75,0.3)] hover:-translate-y-1 active:translate-y-0"
-                    >
-                      ISTRAŽITE KOLEKCIJU
-                    </Link>
+                
+                {/* Right Side - Content */}
+                <div className="relative w-full md:w-[50%] flex flex-col justify-center items-center md:items-start px-8 md:px-[60px] py-12 md:py-16 text-center md:text-left bg-[#fff8f5] animate-fade-in-left">
+                  <div className="relative z-10 space-y-6 flex flex-col items-center md:items-start">
+                    <div className="space-y-3 flex flex-col items-center md:items-start">
+                      <h1 className="font-serif text-[#1f1b18] text-4xl md:text-5xl lg:text-[56px] leading-[1.1] drop-shadow-sm">
+                        Box buketi & <br className="hidden md:block" /> mirisne svijeće
+                      </h1>
+                      <div className="h-1 w-20 bg-[#81524b] rounded-full" />
+                    </div>
+                    
+                    <p className="font-sans text-[#514441] text-base md:text-lg leading-relaxed max-w-[440px] opacity-90">
+                      Personalizirani pokloni kreirani s pažnjom. Otkrijte našu ponudu box buketa i svijeća. Dostava cijela HR | Zagreb besplatno.
+                    </p>
+                    
+                    <div className="pt-4">
+                      <Link 
+                        href="/galerija" 
+                        className="inline-flex items-center justify-center bg-[#81524b] text-white px-8 md:px-10 py-4 md:py-5 rounded-[20px] font-sans font-medium text-[13px] md:text-[14px] tracking-[2px] uppercase transition-all duration-300 hover:bg-[#6e463f] hover:shadow-[0_10px_20px_rgba(129,82,75,0.3)] hover:-translate-y-1 active:translate-y-0"
+                      >
+                        ISTRAŽITE KOLEKCIJU
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
