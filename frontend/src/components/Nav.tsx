@@ -121,7 +121,7 @@ export default function Nav() {
     <>
       <header className="sticky top-0 z-50 backdrop-blur-[12px] bg-[#fff8f5]/90 border-b border-[rgba(214,194,191,0.3)] flex flex-col items-center w-full px-4 md:px-[40px] transition-all duration-300">
         <div className="flex items-center justify-between w-full max-w-[1200px] px-2 md:px-[64px] py-[16px] md:py-[24px]">
-          <Link href="/pocetna">
+          <Link href="/home">
             <div className="relative shrink-0 size-[50px] md:size-[80px] cursor-pointer hover:opacity-80 transition-opacity">
               <img alt="La Maya Logo" className="absolute inset-0 size-full object-contain" src={imgLaMayaLogo} />
             </div>
