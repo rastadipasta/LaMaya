@@ -63,7 +63,7 @@ export default function LaMayaKontakt() {
                   <ContactInfoItem 
                     icon={imgMargin2} 
                     label="TELEFON" 
-                    content="+385 95 511 0096" 
+                    content={<a href="tel:+38595511096" className="hover:text-[#81524b] transition-colors">+385 95 511 0096</a>} 
                   />
                   <ContactInfoItem 
                     icon={imgMargin3} 
