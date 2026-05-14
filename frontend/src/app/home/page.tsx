@@ -56,7 +56,7 @@ export default function LaMayaHome() {
               <div className="flex flex-col md:flex-row items-stretch min-h-[500px] md:min-h-[600px]">
                 
                 {/* Left Side - New Box Image */}
-                <div className="relative w-full md:w-[50%] overflow-hidden group">
+                <div className="relative w-full md:w-[50%] min-h-[350px] md:min-h-0 overflow-hidden group">
                   <img 
                     alt="La Maya Box Buket" 
                     className="absolute inset-0 size-full object-cover object-center group-hover:scale-105 transition-transform duration-[10s] ease-out" 
